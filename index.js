@@ -1,7 +1,10 @@
 'use strict';
+require('hazardous');
+const path = require('path');
 const execa = require('execa');
 const isJpg = require('is-jpg');
-const mozjpeg = require('mozjpeg');
+let mozjpeg = require('mozjpeg');
+mozjpeg = path.join(mozjpeg, "")
 
 module.exports = options => buffer => {
 	options = Object.assign({
